@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Services - Nitesh Portfolio</title>
+    <style>
+        .content-services{
+            width: 50%;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .service-card {
+            background-color: rgba(7, 123, 50, 0.1);
+            border: 2px solid #077b32;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            width: 45%;
+            transition: 0.1s;
+            text-align: center;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px #077b32;
+        }
+        .service-icon {
+            font-size: 3rem;
+            color: #077b32;
+            margin-bottom: 15px;
+        }
+        .service-card h3 {
+            color: #077b32;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 884px) {
+            .service-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Nitesh <span>Kumar</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="services.html">Service</a>
+                <a href="contact.html">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="/images/main.jpg" alt="">
+            </div>
+            <div class="content" style="padding-top:40%;">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">My <span>Services</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                    I offer a range of web development and design services to help businesses establish a strong online presence. Here are the key services I provide:
+                </p>
+                
+                <div class="services-container">
+                    <div class="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Custom website development with responsive design, ensuring your site looks great on all devices.</p>
+                    </div>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>Creating intuitive and engaging user interfaces with a focus on enhancing the user experience.</p>
+                    </div>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile App Development</h3>
+                        <p>Building cross-platform mobile applications that work seamlessly on iOS and Android devices.</p>
+                    </div>
+                    
+                    <div class="service-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                        <p>Developing robust server-side applications and APIs to power your web and mobile applications.</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a  onclick="window.open('https:/github.com/NICK-k29')" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a onclick="window.open('https:/www.linkedin.com/in/nitesh-kumar-b28a6a268/')" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                    <a onclick="window.open('mailto:niteshvishvakarma29@gmail.com')" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1700"><i class="fa fa-envelope"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="2000">
+                    <button>Get a Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

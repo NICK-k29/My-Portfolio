@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Contact - Nitesh Portfolio</title>
+
+    <style>
+        .contact-container {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            width: 48%;
+        }
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #077b32;
+            margin-right: 15px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 2px solid #077b32;
+        }
+        .contact-text {
+            color: white;
+        }
+        .contact-text h4 {
+            margin-bottom: 5px;
+            color: #077b32;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid #077b32;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            box-shadow: 0 0 10px #077b32;
+        }
+        .contact-form textarea {
+            height: 90px;
+            resize: none;
+        }
+        .contact-form button {
+            width: 50%;
+            margin-top: 15px;
+        }
+        @media (max-width: 884px) {
+            .contact-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Nitesh <span>Kumar</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="services.html">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="services.html">Service</a>
+                <a href="contact.html">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="/images/main.jpg" alt="">
+            </div>
+            <div class="content contact-content" style="padding-top:20%;">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Contact <span>Me</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                    Feel free to get in touch with me. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                </p>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1200">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>nitesh@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+91 9694970063</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <div class="btn">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a  onclick="window.open('https:/github.com/NICK-k29')" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a onclick="window.open('https:/www.linkedin.com/in/nitesh-kumar-b28a6a268/')" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                    <a onclick="window.open('mailto:niteshvishvakarma29@gmail.com')" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1700"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

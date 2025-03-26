@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Nitesh Kumar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">NK</div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('projects') }}" class="active">Projects</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header" style="padding-top: 150px; padding-bottom: 50px; background-color: var(--light-bg);">
+        <div class="container">
+            <h1 class="section-title">My Projects</h1>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto;">Here's a collection of my recent work. Each project represents my passion for creating innovative solutions.</p>
+        </div>
+    </section>
+
+    <section class="projects-section" style="padding: 70px 0 100px;">
+        <div class="container">
+            <div class="project-filter" style="display: flex; justify-content: center; margin-bottom: 40px;">
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <button class="filter-btn active" style="padding: 8px 20px; border: none; background-color: var(--primary-color); color: white; border-radius: 30px; cursor: pointer; font-weight: 500; transition: var(--transition);">All</button>
+                    <button class="filter-btn" style="padding: 8px 20px; border: none; background-color: var(--light-bg); color: var(--text-color); border-radius: 30px; cursor: pointer; font-weight: 500; transition: var(--transition);">Web Development</button>
+                    <button class="filter-btn" style="padding: 8px 20px; border: none; background-color: var(--light-bg); color: var(--text-color); border-radius: 30px; cursor: pointer; font-weight: 500; transition: var(--transition);">Mobile Apps</button>
+                    <button class="filter-btn" style="padding: 8px 20px; border: none; background-color: var(--light-bg); color: var(--text-color); border-radius: 30px; cursor: pointer; font-weight: 500; transition: var(--transition);">UI/UX Design</button>
+                </div>
+            </div>
+
+            <div class="project-cards">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="E-commerce Website">
+                    </div>
+                    <div class="project-info">
+                        <h3>Food Fusion</h3>
+                        <p>A fully responsive e-commerce platform built with HTML/CSS, Node.js, and MySQL. Features include user authentication, product search, and payment integration.</p>
+                        <div style="display: flex; gap: 10px; margin: 15px 0;">
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">MySQL/span>
+                        </div>
+                        <a href="https://github.com/NICK-k29/Food-Fusion" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Portfolio Website">
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website built with HTML, CSS, and JavaScript. Features a responsive design, project showcase, and contact form.</p>
+                        <div style="display: flex; gap: 10px; margin: 15px 0;">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/NICK-k29/My-Portfolio/tree/main/portfolio" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="Task Management App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>A productivity app that helps users organize tasks, set priorities, and track progress. Built with Flutter for cross-platform compatibility.</p>
+                        <div style="display: flex; gap: 10px; margin: 15px 0;">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Dart</span>
+                        </div>
+                        <a href="https://github.com/NICK-k29/My-ToDo-App" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/project4.jpg') }}" alt="Weather App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather App</h3>
+                        <p>A weather application that provides real-time weather information based on user location. Integrates with OpenWeatherMap API.</p>
+                        <div style="display: flex; gap: 10px; margin: 15px 0;">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">API</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/project5.jpg') }}" alt="Blog Platform">
+                    </div>
+                    <div class="project-info">
+                        <h3>Python-mini-projects</h3>
+                        <p>A content management system for bloggers with features like rich text editing, image uploads, and comment management.</p>
+                        <div style="display: flex; gap: 10px; margin: 15px 0;">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">SQLAlchemy</span>
+                        </div>
+                        <a href="https://github.com/NICK-k29/python-mini-projects" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/project6.jpg') }}" alt="Fitness Tracker">
+                    </div>
+                    <div class="project-info">
+                        <h3>Fitness Tracker</h3>
+                        <p>A mobile application that helps users track workouts, set fitness goals, and monitor progress over time.</p>
+                        <div style="display: flex; gap: 10px; margin: 15px 0;">
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">Redux</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">NK</div>
+                <div class="social-links">
+                    <a onclick="window.open('https:/github.com/NICK-k29')" class="social-icon" style="cursor: pointer;" ><i class="fab fa-github"></i></a>
+                    <a onclick="window.open('https:/www.linkedin.com/in/nitesh-kumar-b28a6a268/')" class="social-icon" style="cursor: pointer;"><i class="fab fa-linkedin"></i></a>
+                    <a onclick="window.open('mailto:niteshvishvakarma29@gmail.com')" class="social-icon" style="cursor: pointer;"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Nitesh Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                filterBtns.forEach(b => b.style.backgroundColor = 'var(--light-bg)');
+                filterBtns.forEach(b => b.style.color = 'var(--text-color)');
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                btn.style.backgroundColor = 'var(--primary-color)';
+                btn.style.color = 'white';
+                
+                // In a real application, you would filter projects here
+                // For now, we'll just show all projects
+            });
+        });
+    </script>
+</body>
+</html>

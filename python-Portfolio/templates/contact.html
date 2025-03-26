@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Nitesh Kumar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">NK</div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header" style="padding-top: 150px; padding-bottom: 50px; background-color: var(--light-bg);">
+        <div class="container">
+            <h1 class="section-title">Get In Touch</h1>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto;">Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.</p>
+        </div>
+    </section>
+
+    <section class="contact-section" style="padding: 70px 0 100px;">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 50px; justify-content: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <div class="contact-info" style="background-color: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
+                        <h3 style="margin-bottom: 25px; font-size: 1.5rem;">Contact Information</h3>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="width: 40px; height: 40px; background-color: var(--light-bg); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                                    <i class="fas fa-envelope" style="color: var(--primary-color);"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0; font-size: 1rem; color: var(--light-text);">Email</h4>
+                                    <p style="margin: 5px 0 0; font-weight: 500;">niteshvishvakarma29@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="width: 40px; height: 40px; background-color: var(--light-bg); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                                    <i class="fas fa-phone" style="color: var(--primary-color);"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0; font-size: 1rem; color: var(--light-text);">Phone</h4>
+                                    <p style="margin: 5px 0 0; font-weight: 500;">+91-9694970063</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 40px; height: 40px; background-color: var(--light-bg); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px;">
+                                    <i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0; font-size: 1rem; color: var(--light-text);">Location</h4>
+                                    <p style="margin: 5px 0 0; font-weight: 500;">Jodhpur, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin: 35px 0 20px; font-size: 1.5rem;">Follow Me</h3>
+                        <div style="display: flex; gap: 15px;">
+                            <a onclick="window.open('https:/github.com/NICK-k29')" style="width: 40px; height: 40px; background-color: var(--light-bg); border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: var(--transition);">
+                                <i class="fab fa-github" style="color: var(--primary-color);"></i>
+                            </a>
+                            <a onclick="window.open('https:/www.linkedin.com/in/nitesh-kumar-b28a6a268/')" style="width: 40px; height: 40px; background-color: var(--light-bg); border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: var(--transition);">
+                                <i class="fab fa-linkedin-in" style="color: var(--primary-color);"></i>
+                            </a>
+                            <a onclick="window.open('mailto:niteshvishvakarma29@gmail.com')" style="width: 40px; height: 40px; background-color: var(--light-bg); border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: var(--transition);">
+                                <i class="fa fa-envelope" style="color: var(--primary-color);"></i>
+                            </a>
+                            <a onclick="window.open('https:/www.instagram.com/lll_nick_ll/')" style="width: 40px; height: 40px; background-color: var(--light-bg); border-radius: 50%; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: var(--transition);">
+                                <i class="fab fa-instagram" style="color: var(--primary-color);"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px;">
+                    <form action="{{ url_for('contact') }}" method="POST" style="background-color: white; padding: 40px; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
+                        <h3 style="margin-bottom: 25px; font-size: 1.5rem;">Send Message</h3>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <label for="name" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Name</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: var(--border-radius); font-family: inherit; transition: var(--transition);">
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Email</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: var(--border-radius); font-family: inherit; transition: var(--transition);">
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <label for="subject" style="display: block; margin-bottom: 8px; font-weight: 500;">Subject</label>
+                            <input type="text" id="subject" name="subject" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: var(--border-radius); font-family: inherit; transition: var(--transition);">
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: var(--border-radius); font-family: inherit; resize: vertical; transition: var(--transition);"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section" style="padding-bottom: 100px;">
+        <div class="container">
+            <div style="background-color: white; padding: 20px; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114487.75850749458!2d73.0151020071602!3d26.278024591484863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c4eaa06ccb9%3A0x8114ea5b0ae1abb8!2sJodhpur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1655987805905!5m2!1sen!2sin" 
+                width="100%" 
+                height="450" 
+                style="border:0; border-radius: var(--border-radius);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">NK</div>
+                <div class="social-links">
+                    <a onclick="window.open('https:/github.com/NICK-k29')" class="social-icon" style="cursor: pointer;"><i class="fab fa-github"></i></a>
+                    <a onclick="window.open('https:/www.linkedin.com/in/nitesh-kumar-b28a6a268/')" class="social-icon" style="cursor: pointer;"><i class="fab fa-linkedin"></i></a>
+                    <a onclick="window.open('mailto:niteshvishvakarma29@gmail.com')" class="social-icon" style="cursor: pointer;"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Nitesh Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form validation
+        const contactForm = document.querySelector('form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send the form data to a server
+            // For now, we'll just show a success message
+            alert('Your message has been sent successfully!');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>

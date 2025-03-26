@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitesh Kumar | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">NK</div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+                    <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hello, I'm <span class="highlight">Nitesh Kumar</span></h1>
+                <h2>Developer & Designer</h2>
+                <p class="intro-text">Welcome to my portfolio! I create elegant solutions through code.</p>
+                <div class="cta-buttons">
+                    <a href="{{ url_for('projects') }}" class="btn primary">View My Work</a>
+                    <a href="{{ url_for('contact') }}" class="btn secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='images/main.jpg') }}" alt="Nitesh Kumar" class="profile-pic">
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>Hi, I'm Nitesh Kumar. I'm a passionate developer with expertise in creating robust and user-friendly applications. I love solving complex problems and turning ideas into reality through code.</p>
+                <div class="skills">
+                    <h3>My Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-cards">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-commerce Website</h3>
+                        <p>A brief description of this amazing project and the technologies used.</p>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A brief description of this amazing project and the technologies used.</p>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="{{ url_for('projects') }}" class="btn secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">NK</div>
+                <div class="social-links">
+                    <a onclick="window.open('https:/github.com/NICK-k29')" class="social-icon" style="cursor: pointer;"><i class="fab fa-github"></i></a>
+                    <a onclick="window.open('https:/www.linkedin.com/in/nitesh-kumar-b28a6a268/')" class="social-icon" style="cursor: pointer;"><i class="fab fa-linkedin"></i></a>
+                    <a onclick="window.open('mailto:niteshvishvakarma29@gmail.com')" class="social-icon" style="cursor: pointer;"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Nitesh Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
